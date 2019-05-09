@@ -19,6 +19,9 @@
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="./assets/demo/demo.css" rel="stylesheet" />
 
+    <link rel="stylesheet" href="./assets/js/pswipe/photoswipe.css">
+    <link rel="stylesheet" href="./assets/js/pswipe/default-skin/default-skin.css">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -33,6 +36,54 @@
         .copyright{
             font-size: 10px;
         }
+
+        .my-gallery {
+/*        width: 100%;*/
+/*        float: left;*/
+            display: inline-block;
+            margin: auto;
+        }
+        @media screen and (max-width: 600px) {
+  .my-gallery {
+            display: inline-block;
+            margin-left: 40px;
+        }
+}
+        .my-gallery img {
+        width: 100%;
+        height: auto;
+        }
+        .my-gallery figure {
+        display: block;
+        float: left;
+        margin: 0 5px 5px 0;
+        width: 190px;
+        }
+        .my-gallery figcaption {
+        display: none;
+        }
+        
+/*        margin-left: 40px;*/
+        
+        /*For brand image */
+        .navbar.navbar-transparent img{
+        max-width: 100%;
+        height: auto;
+        padding-left: 0px;
+        background: none;
+        }
+        .navbar img{
+        background: url(./assets/img/logo_black.png) no-repeat;
+        padding-left: 180px;
+        width: 130px;
+        height: 114px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container{
+                min-height: 108px;
+            }
+        }
     </style>
 </head>
 
@@ -41,8 +92,13 @@
         <div class="container">
             <div class="navbar-translate">
                 <a class="navbar-brand" href="#">
+                    <div class="profile-photo-small">
+                        <img src="./assets/img/logo_white.png" alt="Trysquare Logo" class="img-fluid">
+                    </div>
+                    <!--
                     <h3 class="">Trysquare</h3>
                     <h6 style="margin-top: -0.65em;">Engineers &amp; Builders</h6>
+-->
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="sr-only">Toggle navigation</span>
@@ -133,8 +189,8 @@
                                 <img src="./assets/img/trysquare_logo_512_trans.png" alt="Raised Image" class="img-raised rounded img-fluid" style="padding: 16px; background: rgba(216, 216, 216, 0.12);">
                             </div>
                             <h1>About Us</h1>
-                            <h4>One of the unique Engineering Consultants in Structural design, supervision and project management in Kerala. A diversified portfolio which covers a number of successful developments, 
-                            in residential buildings and villas, commercial buildings, institutional facilities, hospitals, resorts  and industrial projects.
+                            <h4>One of the unique Engineering Consultants in Structural design, supervision and project management in Kerala. A diversified portfolio which covers a number of successful developments,
+                                in residential buildings and villas, commercial buildings, institutional facilities, hospitals, resorts and industrial projects.
                             </h4>
                             <div class="col-sm-12 col-md-8 mr-auto ml-auto">
                                 <img src="assets/img/arch-opt-2x.png" class="rounded" width="100%">
@@ -178,7 +234,7 @@
                                 </div>
                                 <h4 class="info-title">Structural Engineering</h4>
                                 <p class="justified">Structural engineering is based on the laws of physics and practical knowledge of the structural performance of different building materials.
-                                   Our experienced structural engineers assess, analyse and recommend the client on which model to use and they work closely with the architects to ensure that the most effective structural system is executed.
+                                    Our experienced structural engineers assess, analyse and recommend the client on which model to use and they work closely with the architects to ensure that the most effective structural system is executed.
                                     Our expertise and experience in the field ensures our projects conform to IS standards in terms of safety, serviceability and stability.</p>
                             </div>
                         </div>
@@ -239,6 +295,123 @@
             <!--END of Our Services Section-->
 
             <!--Our Projects Section-->
+
+            <div class="section section-services text-center">
+                <div class="row">
+                    <div class="col-md-8 ml-auto mr-auto">
+                        <h1>Gallery of Works</h1>
+                        <h5 class="description">Here's few of our portfolio of works we've undertaken</h5>
+                    </div>
+                </div>
+                <div class="features">
+                    <div class="row">
+                        <div class="my-gallery">
+
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="#" itemprop="contentUrl" data-size="1024x1024" data-id="0">
+                                    <img src="assets/img/works/work-1.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Image caption 1</figcaption>
+
+                            </figure>
+
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="#" itemprop="contentUrl" data-size="964x1024" data-id="1">
+                                    <img src="assets/img/works/work-2.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Image caption 2</figcaption>
+                            </figure>
+
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="#" itemprop="contentUrl" data-size="1024x683" data-id="2">
+                                    <img src="assets/img/works/work-3.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Image caption 3</figcaption>
+                            </figure>
+
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="#" itemprop="contentUrl" data-size="1024x768" data-id="3">
+                                    <img src="assets/img/works/work-4.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                                <figcaption itemprop="caption description">Image caption 4</figcaption>
+                            </figure>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Root element of PhotoSwipe. Must have class pswp. -->
+            <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+                <!-- Background of PhotoSwipe. 
+                    It's a separate element as animating opacity is faster than rgba(). -->
+                <div class="pswp__bg"></div>
+
+                <!-- Slides wrapper with overflow:hidden. -->
+                <div class="pswp__scroll-wrap">
+
+                    <!-- Container that holds slides. 
+                        PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                        Don't modify these 3 pswp__item elements, data is added later on. -->
+                    <div class="pswp__container">
+                        <div class="pswp__item"></div>
+                        <div class="pswp__item"></div>
+                        <div class="pswp__item"></div>
+                    </div>
+
+                    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                    <div class="pswp__ui pswp__ui--hidden">
+
+                        <div class="pswp__top-bar">
+
+                            <!--  Controls are self-explanatory. Order can be changed. -->
+
+                            <div class="pswp__counter"></div>
+
+                            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                            <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                            <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                            <!-- element will get class pswp__preloader--active when preloader is running -->
+                            <div class="pswp__preloader">
+                                <div class="pswp__preloader__icn">
+                                    <div class="pswp__preloader__cut">
+                                        <div class="pswp__preloader__donut"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                            <div class="pswp__share-tooltip"></div>
+                        </div>
+
+                        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                        </button>
+
+                        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                        </button>
+
+                        <div class="pswp__caption">
+                            <div class="pswp__caption__center"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--END of Our Projects Section-->
 
             <!-- <div class="section section-projects text-center">
                 <div class="profile-page">
@@ -311,62 +484,62 @@
             </div> -->
 
             <!--END of Projects Section-->
-            
-            
+
+
             <!--Start of Our Team Section-->
             <div class="section section-team text-center">
                 <div class="row">
                     <div class="col-md-8 ml-auto mr-auto">
                         <!--<h2 class="title">Our Services</h2>-->
                         <h1>Our Team</h1>
-                        <h5 class="description">Our Passionate Team is dedicated to making your dream comes true. 
-                        Experts in the domain, we work towards the ultimate goal of providing you with best state of the art constructions.</h5>
+                        <h5 class="description">Our Passionate Team is dedicated to making your dream comes true.
+                            Experts in the domain, we work towards the ultimate goal of providing you with best state of the art constructions.</h5>
                     </div>
                 </div>
                 <div class="features">
                     <div class="row">
                         <div class="col-md-4">
                             <div class="info">
-                               <div class="profile">
-                                   <div class="avatar">
+                                <div class="profile">
+                                    <div class="avatar">
                                         <img src="assets/img/prof-1.jpg" alt="Circle Image" class="img-raised rounded-circle img-fluid" style="max-width: 160px;    width: 100%;    margin: 0 auto;">
                                     </div>
-                               </div>
+                                </div>
                                 <div class="name">
                                     <h3 class="title">Boby Tharu</h3>
                                     <h6>Principal Engineer &amp; Co-Founder</h6>
-                                  </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="info">
-                               <div class="profile">
-                                   <div class="avatar">
+                                <div class="profile">
+                                    <div class="avatar">
                                         <img src="assets/img/prof-2.jpg" alt="Circle Image" class="img-raised rounded-circle img-fluid" style="max-width: 160px;    width: 100%;    margin: 0 auto;">
                                     </div>
-                               </div>
+                                </div>
                                 <div class="name">
                                     <h3 class="title">Pankaj Krishnan V B</h3>
                                     <h6>Principal Engineer &amp; Co-Founder</h6>
-                                  </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="info">
-                               <div class="profile">
-                                   <div class="avatar">
+                                <div class="profile">
+                                    <div class="avatar">
                                         <img src="assets/img/prof-3.jpg" alt="Circle Image" class="img-raised rounded-circle img-fluid" style="max-width: 160px;    width: 100%;    margin: 0 auto;">
                                     </div>
-                               </div>
+                                </div>
                                 <div class="name">
                                     <h3 class="title">Paul P Varghese</h3>
                                     <h6>Principal Engineer &amp; Co-Founder</h6>
-                                  </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
             </div>
             <!--END of Our Team Section-->
 
@@ -382,7 +555,7 @@
                         <h4 class="text-center">If you are passionate about your work, highly motivated, and looking for professional growth and development, <strong>Trysquare</strong> may be the place for you. We offer career opportunities for motivated, creative professionals seeking a dynamic workplace environment who believes in engineering ethics.</h4>
                         <div class="row">
                             <div class="col-md-4 mt-4 ml-auto mr-auto text-center">
-                                <button class="btn btn-primary btn-raised">
+                                <button class="btn btn-primary btn-raised" id="btn-send-resume">
                                     Send Your Resume
                                 </button>
                             </div>
@@ -398,7 +571,7 @@
                     <div class="col-md-8 ml-auto mr-auto">
                         <h1 class="text-center">Work with us</h1>
                         <h4 class="text-center description">Divide details about your product or agency work into parts. Write a few lines about each one and contact us about any further collaboration. We will responde get back to you in a couple of hours.</h4>
-                        <form class="contact-form" id="contactform" action="https://formsubmit.io/send/0c70d470-a3e7-4553-8aaf-8af63b237dc5" method="POST">
+                        <form class="contact-form" id="contactform" action="https://formsubmit.io/send/63467974-9433-4e74-a346-0b7e4ce760e5" method="POST">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group bmd-form-group">
@@ -406,6 +579,8 @@
                                         <input name="name" type="text" id="name" class="form-control">
                                         <!-- todo : change redirect url -->
                                         <input name="_redirect" type="hidden" id="name" value="https://monsterbrain.github.io/trysquare?send=1">
+                                       <!--Test URL-->
+                                        <!--<input name="_redirect" type="hidden" id="name" value="http://127.0.0.1:49451/index.html?send=1">-->
                                     </div>
                                 </div>
                                 <input name="_formsubmit_id" type="text" style="display:none">
@@ -424,9 +599,13 @@
                                 <div class="col-md-4 ml-auto mr-auto text-center">
                                     <input class="btn btn-primary btn-raised" value="Send Message" type="submit">
                                     <!-- <button class="btn btn-primary btn-raised">
-                                        
                                         Send Message
                                     </button> -->
+                                </div>
+                            </div>
+                            <div class="alert alert-success">
+                                <div class="container">
+                                  <b>Success :</b> Your message is delivered successfully
                                 </div>
                             </div>
                         </form>
@@ -445,8 +624,8 @@
                     <h5>2632/XXI, Toms Park <br />PP Link Road, Perumbavoor<br />Kerala, 683542</h5>
                 </div>
                 <div class="col-md-3">
-                        <h4><i class="fa fa-envelope"></i>&nbsp; <strong>Mail Us at</strong></h4>
-                        <h5>info@trysquare.net</h5>
+                    <h4><i class="fa fa-envelope"></i>&nbsp; <strong>Mail Us at</strong></h4>
+                    <h5>info@trysquare.net</h5>
                 </div>
                 <div class="col-md-2 text-right">
                     <h4><i class="fa fa-phone"></i>&nbsp; <strong>Call Us</strong></h4>
@@ -505,13 +684,80 @@
     <!--<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>-->
     <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
     <script src="./assets/js/material-kit.js?v=2.0.5" type="text/javascript"></script>
+    <script src="./assets/js/pswipe/photoswipe.js"></script>
+    <script src="./assets/js/pswipe/photoswipe-ui-default.js"></script>
+    <script>
+        $('.my-gallery>figure>a').click(function(e) {
+            e.preventDefault();
+
+            var index = $(e.currentTarget).attr('data-id');
+            openPhotoSwipe(index);
+        });
+
+        function openPhotoSwipe(index) {
+            // photo swipe
+            var pswpElement = document.querySelectorAll('.pswp')[0];
+
+            // build items array
+            var items = [{
+                    src: 'assets/img/works/work-1.jpg',
+                    w: 1600,
+                    h: 900
+                },
+                {
+                    src: 'assets/img/works/work-2.jpg',
+                    w: 1600,
+                    h: 900
+                },
+                {
+                    src: 'assets/img/works/work-3.jpg',
+                    w: 1600,
+                    h: 900
+                },
+                {
+                    src: 'assets/img/works/work-4.jpg',
+                    w: 1600,
+                    h: 900
+                }
+            ];
+
+            // define options (if needed)
+            var options = {
+                // optionName: 'option value'
+                // for example:
+                index: parseInt(index) // start at index
+            };
+
+            // Initializes and opens PhotoSwipe
+            var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
+        }
+    </script>
     <script>
         $(document).ready(function() {
             //init DateTimePickers
             materialKit.initFormExtendedDatetimepickers();
-
-            // Sliders Init
-            materialKit.initSliders();
+            
+            $('#btn-send-resume').click(function(e){
+               e.preventDefault();
+                window.open('https://mail.google.com/mail/u/0/?view=cm&fs=1&to=info@trysquare.net&su=Job%20Application&body=%20&tf=1');
+            });
+            
+            const urlParams = new URLSearchParams(window.location.search);
+            const sendParam = urlParams.get('send');
+//            console.log('sendParam='+sendParam);
+            $('.alert.alert-success').hide();
+            if(sendParam=='1'){
+                // show success alert
+                $("html, body").animate({
+                    scrollTop: $('.section-contactus').offset().top
+                }, 50);
+                
+                $('.alert.alert-success').show();
+                setTimeout(()=>{
+                    $('.alert.alert-success').fadeOut();
+                }, 2500);
+            }
         });
 
         function scrollToServices() {
@@ -545,7 +791,7 @@
                 }, 1000);
             }
         }
-        
+
         function scrollToCareers() {
             if ($('.section-careers').length != 0) {
                 $("html, body").animate({
@@ -559,7 +805,6 @@
                 scrollTop: 0
             }, 1000);
         }
-
     </script>
 </body>
 
